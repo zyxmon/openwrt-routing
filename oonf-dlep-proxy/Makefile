@@ -1,8 +1,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=oonf-dlep-proxy
-PKG_VERSION:=0.8.3
-PKG_REV:=a5ba0e6c093ff6c289a77ec9c3d04b5f94145e08
+PKG_VERSION:=0.9.2
+PKG_REV:=d1780791bd449f578a37a2b3103682169d9a01a9
 PKG_RELEASE:=$(PKG_REV)
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
@@ -40,7 +40,7 @@ endef
 define Package/oonf-dlep-proxy
 	$(call Package/oonf-git/template) 
 	TITLE:= Build DLEP Radio+Router Agent
-	DEPENDS:=+librt +libnl-tiny +libuci
+	DEPENDS:=+librt +libnl-tiny +libuci +oonf-init-scripts
 	VERSION:=$(PKG_VERSION)
 endef
 
